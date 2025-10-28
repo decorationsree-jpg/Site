@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Premium Design System - Updated Readability + Mobile Friendly */
+
+@layer base {
+  :root {
+    --background: 35 25% 98%;
+    --foreground: 0 5% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 5% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 5% 8%;
+
+    --primary: 0 70% 25%;
+    --primary-foreground: 40 90% 98%;
+
+    --secondary: 40 45% 92%;
+    --secondary-foreground: 0 60% 20%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 0 5% 38%;
+
+    --accent: 42 95% 52%;
+    --accent-foreground: 0 5% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 90% 98%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 92%;
+    --ring: 42 95% 58%;
+
+    --radius: 0.75rem;
+    --gradient-hero: linear-gradient(
+      180deg,
+      hsl(0 70% 20% / 0.92) 0%,
+      hsl(0 65% 18% / 0.98) 100%
+    );
+    --shadow-sm: 0 2px 8px -2px hsl(0 70% 20% / 0.12);
+    --shadow-lg: 0 10px 34px -8px hsl(0 70% 20% / 0.22);
+  }
+
+  .dark {
+    --background: 0 10% 6%;
+    --foreground: 40 80% 98%;
+    --primary: 0 75% 32%;
+    --primary-foreground: 40 95% 98%;
+    --accent: 42 98% 60%;
+    --accent-foreground: 0 10% 6%;
+    --gradient-hero: linear-gradient(
+      180deg,
+      hsl(0 75% 30% / 0.95) 0%,
+      hsl(0 60% 20% / 0.98) 100%
+    );
+  }
+}
+
+@layer base {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  * {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* ✅ HERO TEXT ALWAYS BRIGHT */
+.hero-text {
+  @apply text-primary-foreground drop-shadow-lg;
+}
+
+/* ✅ Mobile Nav Links */
+.mobile-nav a {
+  @apply text-primary font-semibold hover:text-accent transition;
+}
+
+/* ✅ Book Now button on mobile */
+.btn-hero-outline {
+  @apply border-primary-foreground text-primary-foreground font-medium hover:bg-primary-foreground hover:text-primary;
+}
+/* ✅ Force Tailwind to keep rotation utility */
+
+
