@@ -15,6 +15,12 @@ export default function DhotiFunctionDecoration() {
         "/services/dhoti5.jpeg",
         "/services/dhoti2.jpg",
         "/services/dhoti3.jpg",
+        "/services/dt.jpeg",
+        "/services/dt2.jpeg",
+        "/services/dt3.jpeg",
+        "/services/dt4.jpeg",
+        "/services/dt5.jpeg",
+        "/services/dt6.jpeg",
  
       ]}
     />

@@ -15,6 +15,12 @@ export default function CradleCeremonyFlowerDecoration() {
         "/services/cradle.jpg",
         "/services/cradle2.jpg",
         "/services/cradle3.jpeg",
+        "/services/cd.jpeg",
+        "/services/cd2.jpeg",
+        "/services/cd3.jpeg",
+        "/services/cd4.jpeg",
+        "/services/cd5.jpeg",
+        "/services/cd6.jpeg",
       ]}
     />
   );

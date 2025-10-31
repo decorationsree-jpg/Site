@@ -15,6 +15,12 @@ export default function BirthdayBalloonDecoration() {
         "/services/birth1.jpeg",
         "/services/birthday4.jpeg",
         "/services/birthday3.jpeg",
+        "/services/bd1.jpeg",
+        "/services/bd2.jpeg",
+        "/services/bd3.jpeg",
+        "/services/bd4.jpeg",
+        "/services/bd5.jpeg",
+        "/services/bd6.jpeg",
       ]}
     />
   );

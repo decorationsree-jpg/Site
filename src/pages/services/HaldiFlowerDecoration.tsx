@@ -15,6 +15,12 @@ export default function HaldiFlowerDecoration() {
         "/services/haldi.jpg",
         "/services/haldi2.jpg",
         "/services/haldi5.jpeg",
+        "/services/hd11.jpeg",
+        "/services/hd2.jpeg",
+        "/services/hd3.jpeg",
+        "/services/hd4.jpeg",
+        "/services/hd5.jpeg",
+        "/services/hd6.jpeg",
       ]}
     />
   );

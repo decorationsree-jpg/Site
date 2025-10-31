@@ -15,6 +15,12 @@ export default function BabyShowerFlowerDecoration() {
         "/services/download.jpeg",
         "/services/baby2.jpg",
         "/services/baby3.jpg",
+        "/services/bs.jpeg",
+        "/services/bs2.jpeg",
+        "/services/bs3.jpeg",
+        "/services/bs4.jpeg",
+        "/services/bs5.jpeg",
+        "/services/bs6.jpeg",
       ]}
     />
   );

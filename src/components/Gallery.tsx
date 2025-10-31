@@ -1,7 +1,16 @@
 
 
 const galleryImages = [
-  "/services/dhoti2.jpg",
+  "/services/gal1.jpeg",
+  "/services/gal2.jpeg",
+  "/services/gal3.jpeg",
+   "/services/gal4.jpeg",
+  "/services/gal5.jpeg",
+   "/services/gal6.jpeg",
+   "/services/gal7.jpeg",
+   "/services/gal8.jpeg",
+   "/services/gal9.jpeg",
+   "/services/gal10.jpeg",
    "/services/haldi2.jpg",
   "/services/anniversary.jpg",
   "/services/engage2.jpg",
@@ -9,13 +18,13 @@ const galleryImages = [
   "/services/baby.jpg",
   "/services/baby2.jpg",
   "/services/dhoti3.jpg",
-  "/services/office2.jpg",
   "/services/office3.jpg",
   "/services/wedding.jpg",
  "/services/engagement.jpg",
   "/services/baby4.jpg",
   "/services/cradle2.jpg",
   "/services/engage3.jpg",
+  "/services/gal11.jpeg",
 
 ];
 

@@ -15,6 +15,12 @@ export default function HouseWarmingFlowerDecoration() {
         "/services/house1.jpg",
         "/services/house2.jpeg",
         "/services/house4.jpeg",
+        "/services/hw.jpeg",
+        "/services/hw2.jpeg",
+        "/services/hw3.jpeg",
+        "/services/hw4.jpeg",
+        "/services/hw5.jpeg",
+        "/services/hw6.jpeg",
       ]}
     />
   );

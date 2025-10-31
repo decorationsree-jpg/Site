@@ -13,8 +13,14 @@ export default function AnniversaryEventDecoration() {
       ]}
       images={[
         "/services/anniversary1.jpg",
-        "/services/anniversary.jpg",
         "/services/anni.jpeg",
+        "/services/an.jpeg",
+        "/services/an2.jpeg",
+        "/services/an3.jpeg",
+        "/services/an4.jpeg",
+        "/services/an5.jpeg",
+        "/services/an6.jpeg",
+        "/services/anniversary.jpg",
       ]}
     />
   );

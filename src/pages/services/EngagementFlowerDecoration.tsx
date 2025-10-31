@@ -15,6 +15,13 @@ export default function EngagementFlowerDecoration() {
         "/services/engage5.jpeg",
         "/services/engage7.jpeg",
         "/services/engage3.jpg",
+        "/services/eg1.jpeg",
+        "/services/eg5.jpeg",
+        "/services/eg3.jpeg",
+        "/services/eg4.jpeg",
+        "/services/ag7.jpeg",
+        "/services/eg6.jpeg",
+
       ]}
     />
   );

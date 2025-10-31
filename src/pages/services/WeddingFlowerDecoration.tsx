@@ -15,6 +15,13 @@ export default function WeddingFlowerDecoration() {
         "/services/wed.jpeg",
         "/services/wed2.jpeg",
         "/services/wedding.jpg",
+        "/services/wd1.jpeg",
+        "/services/wd2.jpeg",
+        "/services/wd3.jpeg",
+        "/services/wd4.jpeg",
+        "/services/wd5.jpeg",
+        "/services/wd6.jpeg",
+  
       ]}
     />
   );

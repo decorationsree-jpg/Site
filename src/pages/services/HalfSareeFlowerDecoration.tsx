@@ -15,6 +15,12 @@ export default function HalfSareeFlowerDecoration() {
         "/services/half.jpg",
         "/services/halfsaree2.jpg",
         "/services/half3.jpeg",
+        "/services/hs1.jpeg",
+        "/services/hs2.jpeg",
+        "/services/hs3.jpeg",
+        "/services/hs4.jpeg",
+        "/services/hs5.jpeg",
+        "/services/hs6.jpeg",
       ]}
     />
   );
