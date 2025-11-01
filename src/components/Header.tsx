@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import floralBg from "@/assets/floral-bg2.jpeg"; // ✅ Background image
-import logo from "/logo.jpeg"; // ✅ Import logo (path from public folder)
+import logo from "/sreelogo.jpg"; // ✅ Import logo (path from public folder)
 
 const Header = () => {
   const [open, setOpen] = useState(false);

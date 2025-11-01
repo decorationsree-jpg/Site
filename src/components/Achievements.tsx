@@ -4,25 +4,25 @@ export const Achievements = () => {
   const stats = [
     {
       icon: Award,
-      number: "800+",
+      number: "1000+",
       label: "Events Decorated",
       description: "Successfully delivered celebrations"
     },
     {
       icon: Calendar,
-      number: "6",
+      number: "8+",
       label: "Years Experience",
       description: "Creating memorable moments"
     },
     {
       icon: MapPin,
-      number: "500+",
+      number: "800+",
       label: "Venues",
       description: "Across multiple locations"
     },
     {
       icon: Users,
-      number: "70%",
+      number: "80%",
       label: "Reference Clients",
       description: "Return & recommend us"
     }
