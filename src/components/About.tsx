@@ -1,45 +1,70 @@
-import aboutBg from "@/assets/floral-bg.jpg"; // ✅ Add a soft floral background image to assets folder
+import aboutBg from "/public/abg.jpg";
+import { useAnimateOnScroll } from "@/hooks/useAnimateOnScroll";
 
 export const About = () => {
+  const { elementRef: textRef, isVisible: isTextVisible } = useAnimateOnScroll();
+  const { elementRef: imageRef, isVisible: isImageVisible } = useAnimateOnScroll();
   return (
     <section
       id="about"
-      className="py-20 bg-[#3b2a23] relative text-white"
+      className="relative text-white bg-cover bg-center bg-no-repeat flex items-center justify-center min-h-screen py-16"
       style={{
         backgroundImage: `url(${aboutBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
         backgroundBlendMode: "overlay",
       }}
     >
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Dark overlay for contrast */}
+      <div className="absolute inset-0 bg-black/80" />
 
-      <div className="relative container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         
         {/* ✅ Title + Text */}
-        <div>
-          <h2 className="text-4xl font-bold mb-6 text-[#E2C39A]">
-            Crafting Moments into Memories
+        <div
+          ref={textRef}
+          className={`text-center md:text-left transform transition-all duration-1000 ${
+            isTextVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+          }`}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#E2C39A]">
+            Crafting Memorable
           </h2>
-          <p className="text-lg leading-relaxed text-gray-200">
-            At <span className="font-semibold text-white">Siree Events</span>, we believe every celebration deserves 
-            to shine with beauty and emotion. From <strong>elegant weddings </strong> 
-            to joyful <strong>birthday celebrations</strong> and traditional 
-            <strong> cultural ceremonies</strong>, we transform your space with 
-            premium floral and balloon decorations — tailored to your dreams.
+          <p className="text-lg md:text-xl leading-relaxed text-gray-200">
+            <span className="font-semibold text-white">Sree Events Vijayawada</span> is one of the 
+            <strong> best event management companies in Vijayawada</strong>, 
+            offering complete <strong>event planning and decoration services</strong> 
+            for all occasions. Whether it’s a grand <strong>wedding celebration</strong>, 
+            an elegant <strong>corporate event</strong>, or a fun-filled 
+            <strong> birthday party</strong>, our team of 
+            <strong> professional event organizers near Vijayawada</strong> ensures every 
+            detail is handled with precision and creativity.
           </p>
-          <p className="mt-4 text-lg text-gray-200">
-            With expert craftsmanship, creative designs, and high-quality décor
-            materials, we ensure your special day is unforgettable.
+
+          <p className="mt-6 text-lg md:text-xl text-gray-200">
+            As one of the <strong>top event planners in Vijayawada</strong>, we 
+            specialize in <strong>traditional wedding décor</strong>, 
+            <strong> engagement decoration</strong>, <strong>reception management</strong>, 
+            and <strong>destination weddings</strong>. From <strong>floral decorations</strong>, 
+            <strong> balloon décor</strong>, and <strong>lighting setups</strong> 
+            to <strong>theme-based event designs</strong>, we create experiences that 
+            reflect your style and story. Choose <strong>Sree Events</strong> for 
+            <strong> affordable event management in Vijayawada</strong> — your 
+            <strong> one-stop solution</strong> for weddings, parties, and 
+            <strong> corporate events in Andhra Pradesh</strong>.
           </p>
         </div>
 
         {/* ✅ Premium Image */}
-        <div className="rounded-xl overflow-hidden shadow-lg border-2 border-[#E2C39A]">
+        <div
+          ref={imageRef}
+          className={`rounded-2xl overflow-hidden shadow-2xl border-2 border-[#E2C39A] transform transition-all duration-1000 ${
+            isImageVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+          }`}
+        >
           <img
             src="https://i.pinimg.com/1200x/a2/53/fc/a253fc965d6bcff7b014d412770e7ab8.jpg"
-            alt="Premium Decoration"
-            className="w-full h-full object-cover"
+            alt="Premium Decoration by Sree Events Vijayawada"
+            className="w-full h-[400px] md:h-[550px] object-cover"
           />
         </div>
 

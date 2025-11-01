@@ -1,6 +1,58 @@
 import { Award, Calendar, MapPin, Users } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 export const Achievements = () => {
+  const [counters, setCounters] = useState([0, 0, 0, 0]);
+  const observerRef = useRef(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          animateNumbers();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (observerRef.current) {
+      observer.observe(observerRef.current);
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observer.unobserve(observerRef.current);
+      }
+    };
+  }, []);
+
+  const animateNumbers = () => {
+    const finalValues = [1000, 8, 800, 80];
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const intervalTime = duration / steps;
+
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+      currentStep++;
+      
+      const progress = currentStep / steps;
+      const newCounters = finalValues.map(value => 
+        Math.round(value * progress)
+      );
+      
+      setCounters(newCounters);
+
+      if (currentStep >= steps) {
+        clearInterval(interval);
+        setCounters(finalValues);
+      }
+    }, intervalTime);
+  };
+
   const stats = [
     {
       icon: Award,
@@ -42,7 +94,7 @@ export const Achievements = () => {
           <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" ref={observerRef}>
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -53,8 +105,11 @@ export const Achievements = () => {
                 <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20 group-hover:bg-accent/30 transition-colors">
                   <Icon className="w-8 h-8 text-accent" />
                 </div>
-                <div className="text-5xl md:text-6xl font-bold mb-2 text-accent">
-                  {stat.number}
+                <div
+                  className="text-5xl md:text-6xl font-bold mb-2 text-accent"
+                >
+                  {counters[index]}
+                  {stat.number.includes('+') ? '+' : stat.number.includes('%') ? '%' : ''}
                 </div>
                 <div className="text-xl font-semibold mb-2">
                   {stat.label}

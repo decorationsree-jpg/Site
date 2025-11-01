@@ -1,4 +1,4 @@
-import { Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { Phone, Mail, Instagram, Facebook, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -34,6 +34,15 @@ const Footer = () => {
     >
       <Facebook size={28} strokeWidth={1.7} />
     </a>
+     {/* ✅ YouTube */}
+     <a
+    href="https://www.youtube.com/@siree_events"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-[#D4AF37] transition-all duration-200"
+  >
+    <Youtube size={28} strokeWidth={1.7} />
+  </a>  
   </div>
 </div>
 

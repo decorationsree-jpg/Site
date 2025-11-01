@@ -1,24 +1,31 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import heroImage1 from "@/assets/hero-decoration-1.jpg";
-import heroImage2 from "@/assets/hero-decoration-2.jpg";
-import heroImage3 from "@/assets/hero-decoration-3.jpg";
 
 const slides = [
   {
-    image: heroImage1,
+    image: "/car1.jpg",
     title: "Exquisite Floral Elegance",
     subtitle: "Transform Your Special Moments",
   },
   {
-    image: heroImage2,
+    image: "/car2.jpg",
     title: "Magical Celebration Designs",
     subtitle: "Creating Memories That Last Forever",
   },
   {
-    image: heroImage3,
+    image: "/car3.jpg",
     title: "Traditional & Modern Décor",
     subtitle: "Bringing Your Vision to Life",
+  },
+  {
+    image: "/car4.jpg",
+    title: "Luxury Event Styling",
+    subtitle: "Experience Grandeur Like Never Before",
+  },
+  {
+    image: "/car5.jpg",
+    title: "Unforgettable Event Ambiance",
+    subtitle: "Turning Your Dreams Into Reality",
   },
 ];
 
@@ -32,23 +39,16 @@ export const Hero = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () =>
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-
-  const prevSlide = () =>
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-
   return (
     <section
-    id="hero"
-    className="relative h-[88vh] md:h-screen overflow-hidden -mt-[1px] pt-0 w-full max-w-full block"
-  style={{
-    overflowX: "hidden",
-    marginTop: "-1px",
-  }}
->
-
-
+      id="hero"
+      className="relative h-[88vh] md:h-screen overflow-hidden -mt-[1px] pt-0 w-full max-w-full block"
+      style={{
+        overflowX: "hidden",
+        marginTop: "-1px",
+      }}
+    >
+      {/* Slides */}
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -65,6 +65,7 @@ export const Hero = () => {
         </div>
       ))}
 
+      {/* Hero Text */}
       <div className="relative h-full flex items-center justify-center text-center px-4">
         <div className="max-w-3xl animate-fadeIn duration-700">
           <h1
@@ -113,7 +114,7 @@ export const Hero = () => {
         </div>
       </div>
 
-
+      {/* Carousel Dots */}
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3">
         {slides.map((_, index) => (
           <button
