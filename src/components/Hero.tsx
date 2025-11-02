@@ -61,7 +61,7 @@ export const Hero = () => {
             alt={slide.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#2B1B12]/95 via-[#2B1B12]/60 to-[#2B1B12]/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#2B1B12]/55 via-[#2B1B12]/60 to-[#2B1B12]/50" />
         </div>
       ))}
 

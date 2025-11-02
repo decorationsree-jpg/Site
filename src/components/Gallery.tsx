@@ -55,9 +55,9 @@ export const Gallery = () => {
 
   return (
     <section id="gallery" className="py-20 px-4 bg-background">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-9xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-7xl font-bold text-foreground mb-4">
             Our Gallery
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>

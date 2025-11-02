@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // ✅ Pages
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 // ✅ Service Pages
@@ -35,6 +37,13 @@ const App = () => (
 
           {/* ✅ Home */}
           <Route path="/" element={<Index />} />
+
+          {/* ✅ About Page */}
+          
+          <Route path="/about" element={<AboutPage />} />
+
+          {/* ✅ Contact Page */}
+          <Route path="/contact" element={<ContactPage />} />
 
           {/* ✅ Redirect /service/... to /services/... correctly */}
           <Route

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import floralBg from "@/assets/floral-bg2.jpeg"; // ✅ Background image
 import logo from "/sreelogo.jpg"; // ✅ Import logo (path from public folder)
 
@@ -7,10 +8,10 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", to: "#hero" },
-    { name: "About Us", to: "#about" },
+    { name: "Home", to: "/" },
+    { name: "About Us", to: "/about" },
     { name: "Services", to: "#services" },
-    { name: "Contact Us", to: "#contact" },
+    { name: "Contact Us", to: "/contact" },
   ];
 
   return (
@@ -50,28 +51,26 @@ const Header = () => {
           {/* ✅ Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.to}
-                className="font-medium transition-all hover:opacity-80"
-                style={{ color: "#FAF3E0" }}
-              >
-                {item.name}
-              </a>
+              item.to.startsWith('#') ? (
+                <a
+                  key={item.name}
+                  href={item.to}
+                  className="font-medium transition-all hover:opacity-80"
+                  style={{ color: "#FAF3E0" }}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.to}
+                  className="font-medium transition-all hover:opacity-80"
+                  style={{ color: "#FAF3E0" }}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
-
-            {/* ✅ Book Now Button */}
-            <a
-              href="#contact"
-              className="px-5 py-2 rounded-full font-semibold transition-all hover:shadow-lg"
-              style={{
-                backgroundColor: "#D4AF37",
-                color: "#2B1B12",
-                border: "2px solid #A67C52",
-              }}
-            >
-              Book Now
-            </a>
           </nav>
 
           {/* ✅ Mobile Menu Button */}
@@ -93,29 +92,28 @@ const Header = () => {
             }}
           >
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.to}
-                className="block font-medium transition-all"
-                style={{ color: "#FAE8C8" }}
-                onClick={() => setOpen(false)}
-              >
-                {item.name}
-              </a>
+              item.to.startsWith('#') ? (
+                <a
+                  key={item.name}
+                  href={item.to}
+                  className="block font-medium transition-all"
+                  style={{ color: "#FAE8C8" }}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.to}
+                  className="block font-medium transition-all"
+                  style={{ color: "#FAE8C8" }}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
-
-            <a
-              href="#contact"
-              className="block text-center px-5 py-3 rounded-full font-semibold"
-              style={{
-                backgroundColor: "#D4AF37",
-                color: "#2B1B12",
-                border: "2px solid #A67C52",
-              }}
-              onClick={() => setOpen(false)}
-            >
-              Book Now
-            </a>
           </div>
         )}
       </div>

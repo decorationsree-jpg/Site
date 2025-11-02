@@ -4,7 +4,8 @@ import { About } from "@/components/About";
 import { Achievements } from "@/components/Achievements";
 import { Services } from "@/components/Services";
 import { Gallery } from "@/components/Gallery";
-import { Contact } from "@/components/Contact";
+import { WhyChooseUs } from "@/components/whychooseus";
+import { BookNow } from "@/components/booknow";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -25,8 +26,8 @@ const Index = () => {
           <About />
         </section>
 
-        <section id="achievements">
-          <Achievements />
+        <section id="why-choose-us">
+          <WhyChooseUs />
         </section>
 
         <section id="services">
@@ -37,8 +38,12 @@ const Index = () => {
           <Gallery />
         </section>
 
-        <section id="contact">
-          <Contact />
+         <section id="achievements">
+          <Achievements />
+        </section>
+
+        <section id="booknow">
+          <BookNow />
         </section>
       </main>
 
