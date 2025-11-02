@@ -1,16 +1,35 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import floralBg from "@/assets/floral-bg2.jpeg"; // ✅ Background image
 import logo from "/sreelogo.jpg"; // ✅ Import logo (path from public folder)
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
+  const services = [
+    { name: "Wedding Decoration", to: "/services/wedding-flower-decoration" },
+    { name: "Birthday Balloon Decoration", to: "/services/birthday-balloon-decoration" },
+    { name: "Haldi Function Decoration", to: "/services/haldi-flower-decoration" },
+    { name: "Engagement Decoration", to: "/services/engagement-flower-decoration" },
+    { name: "Half Saree Function", to: "/services/half-saree-flower-decoration" },
+    { name: "Dhoti Function", to: "/services/dhoti-function-decoration" },
+    { name: "House Warming", to: "/services/house-warming-flower-decoration" },
+    { name: "Anniversary Event", to: "/services/anniversary-event-decoration" },
+    { name: "Baby Shower", to: "/services/baby-shower-flower-decoration" },
+    { name: "Cradle Ceremony", to: "/services/cradle-ceremony-flower-decoration" },
+    { name: "Office Inauguration", to: "/services/office-inauguration-decoration" },
+  ];
+
   const navItems = [
     { name: "Home", to: "/" },
     { name: "About Us", to: "/about" },
-    { name: "Services", to: "#services" },
     { name: "Contact Us", to: "/contact" },
   ];
 
@@ -51,26 +70,32 @@ const Header = () => {
           {/* ✅ Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              item.to.startsWith('#') ? (
-                <a
-                  key={item.name}
-                  href={item.to}
-                  className="font-medium transition-all hover:opacity-80"
-                  style={{ color: "#FAF3E0" }}
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.to}
-                  className="font-medium transition-all hover:opacity-80"
-                  style={{ color: "#FAF3E0" }}
-                >
-                  {item.name}
-                </Link>
-              )
+              <Link
+                key={item.name}
+                to={item.to}
+                className="font-medium transition-all hover:opacity-80"
+                style={{ color: "#FAF3E0" }}
+              >
+                {item.name}
+              </Link>
             ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="font-medium transition-all hover:opacity-80 focus:outline-none" style={{ color: "#FAF3E0" }}>
+                Services <ChevronDown className="inline-block ml-1 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-black/90 border border-[#D4AF37]/20">
+                {services.map((service) => (
+                  <DropdownMenuItem key={service.name} asChild>
+                    <Link
+                      to={service.to}
+                      className="text-[#FAF3E0] hover:bg-[#D4AF37]/20 cursor-pointer"
+                    >
+                      {service.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* ✅ Mobile Menu Button */}
@@ -88,32 +113,40 @@ const Header = () => {
           <div
             className="md:hidden px-6 py-4 space-y-4"
             style={{
-              background: "rgba(0,0,0,0.75)",
+              background: "rgba(0,0,0,0.90)",
             }}
           >
             {navItems.map((item) => (
-              item.to.startsWith('#') ? (
-                <a
-                  key={item.name}
-                  href={item.to}
-                  className="block font-medium transition-all"
-                  style={{ color: "#FAE8C8" }}
-                  onClick={() => setOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.to}
-                  className="block font-medium transition-all"
-                  style={{ color: "#FAE8C8" }}
-                  onClick={() => setOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              )
+              <Link
+                key={item.name}
+                to={item.to}
+                className="block font-medium transition-all"
+                style={{ color: "#FAE8C8" }}
+                onClick={() => setOpen(false)}
+              >
+                {item.name}
+              </Link>
             ))}
+            
+            {/* Services Section */}
+            <div className="pt-2 border-t border-[#D4AF37]/20">
+              <div className="font-medium mb-2" style={{ color: "#D4AF37" }}>
+                Services
+              </div>
+              <div className="space-y-3 pl-4">
+                {services.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.to}
+                    className="block text-sm font-medium transition-all hover:text-[#D4AF37]"
+                    style={{ color: "#FAE8C8" }}
+                    onClick={() => setOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         )}
       </div>
