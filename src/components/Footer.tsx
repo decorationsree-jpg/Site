@@ -148,10 +148,6 @@ const Footer = () => {
     referrerPolicy="no-referrer-when-downgrade"
   ></iframe>
 </div>
-  <p className="text-center text-xs italic text-[#D4AF37]/80">
-  "Turning Every Occasion into a Cherished Memory ✨"
-</p>
-
         </div>
       </div>
     </footer>

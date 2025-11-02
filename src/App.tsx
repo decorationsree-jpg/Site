@@ -7,9 +7,10 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // ✅ Pages
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import AboutPage from "./pages/AboutPage";
+import AboutPage from "./pages/Aboutpage";
 import ContactPage from "./pages/ContactPage";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollToTop from "@/components/ScrollToTop";
 
 // ✅ Service Pages
 import BirthdayBalloonDecoration from "@/pages/services/BirthdayBalloonDecoration";
@@ -33,6 +34,7 @@ const App = () => (
       <Sonner />
 
       <BrowserRouter basename="/">
+        <ScrollToTop />
         <Routes>
 
           {/* ✅ Home */}
