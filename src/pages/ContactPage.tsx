@@ -43,7 +43,7 @@ const ContactPage = () => {
       <Header />
       <div className="pt-12" />
 
-      <main className="flex-grow scale-[100] sm:scale-100 origin-top">
+      <main className="flex-grow scale-[1] sm:scale-100 origin-top">
         <section
           id="contact"
           className="relative py-20 sm:py-32 px-3 sm:px-6 bg-gradient-to-b from-[#1a1a1a] to-[#2B1B12] text-white"
