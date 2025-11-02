@@ -34,7 +34,7 @@ const AboutPage = () => {
 
             <div className="prose prose-lg prose-invert mx-auto">
               <p className="text-lg leading-relaxed mb-6 text-gray-200">
-                Welcome to Sree Events Vijayawada, your premier destination for exceptional event management and decoration services. As one of the leading event management companies in Vijayawada, we specialize in transforming ordinary spaces into extraordinary experiences through our creative and professional approach to event planning and decoration.
+                Welcome to Sireeevents Vijayawada, your premier destination for exceptional event management and decoration services. As one of the leading event management companies in Vijayawada, we specialize in transforming ordinary spaces into extraordinary experiences through our creative and professional approach to event planning and decoration.
               </p>
 
               <p className="text-lg leading-relaxed mb-6 text-gray-200">
