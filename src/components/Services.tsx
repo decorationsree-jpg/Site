@@ -10,7 +10,7 @@ const services = [
   { title: "Dhoti Function Decoration", image: "/services/dhoti.jpg", slug: "dhoti-function-decoration" },
   { title: "House Warming Flower Decoration", image: "/services/house1.jpg", slug: "house-warming-flower-decoration" },
   { title: "Anniversary Event Decoration", image: "/services/anniversary1.jpg", slug: "anniversary-event-decoration" },
-  { title: "Baby Shower Flower Decoration", image: "/public/bs.jpg", slug: "baby-shower-flower-decoration" },
+  { title: "Baby Shower Flower Decoration", image: "/bs.jpg", slug: "baby-shower-flower-decoration" },
   { title: "Cradle Ceremony Flower Decoration", image: "/services/cradle.jpg", slug: "cradle-ceremony-flower-decoration" },
   { title: "Office Inauguration Decoration", image: "/services/office.jpg", slug: "office-inauguration-decoration" },
 ];

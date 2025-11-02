@@ -41,21 +41,20 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative py-20 sm:py-28 px-3 sm:px-6 bg-gradient-to-b from-[#1a1a1a] to-[#2B1B12] text-white"
+            className="relative py-16 sm:py-32 px-4 bg-gradient-to-b from-[#1a1a1a] to-[#2B1B12] text-white min-h-screen"
     >
       {/* Decorative Background */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNENEFGMzciIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtMS4xLS45LTItMi0ycy0yIC45LTIgMiAuOSAyIDIgMiAyLS45IDItMnptLTE4IDBjMC0xLjEtLjktMi0yLTJzLTIgLjktMiAyIC45IDIgMiAyIDItLjkgMi0yem0zNiAxOGMwLTEuMS0uOS0yLTItMnMtMiAuOS0yIDIgLjkgMiAyIDIgMi0uOSAyLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
 
-      <div className="container mx-auto max-w-6xl relative z-10">
+            <div className="container mx-auto max-w-6xl relative z-10">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-4xl sm:text-6xl font-bold text-[#E2C39A] mb-3 sm:mb-4 drop-shadow-lg">
+        <div className="text-center mb-12 sm:mb-16 transform transition-all duration-700 hover:scale-105">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-[#E2C39A] mb-3 sm:mb-4 drop-shadow-2xl">
             Contact Us
           </h2>
-          <div className="w-24 sm:w-32 h-[2px] bg-gradient-to-r from-[#D4AF37]/50 via-[#D4AF37] to-[#D4AF37]/50 mx-auto mb-4"></div>
-          <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed px-2">
-            Let's plan your event and make it unforgettable! Reach out to Sree
-            Events Vijayawada today.
+          <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-[#D4AF37]/50 via-[#D4AF37] to-[#D4AF37]/50 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed px-4">
+            Let's plan your event and make it unforgettable! Reach out to Sree Events Vijayawada today.
           </p>
         </div>
 
@@ -215,8 +214,8 @@ export const Contact = () => {
                 />
                 <Button
                   size="lg"
-                  className={`w-full md:col-span-2 bg-[#D4AF37] text-black font-bold rounded-lg hover:bg-[#b8932c] text-base sm:text-xl h-12 sm:h-14 ${
-                    isHovered ? "scale-[1.02] shadow-lg" : ""
+                  className={`w-full md:col-span-2 bg-[#D4AF37] text-black font-bold rounded-lg hover:bg-[#b8932c] transition-all duration-300 text-sm sm:text-base md:text-lg h-12 sm:h-14 ${
+                    isHovered ? 'scale-[1.02] shadow-lg' : ''
                   }`}
                   onClick={sendToWhatsapp}
                   onMouseEnter={() => setIsHovered(true)}
@@ -229,9 +228,9 @@ export const Contact = () => {
           </Card>
         </div>
 
-        {/* Map */}
+        {/* Map Section */}
         <div className="mt-12 sm:mt-20">
-          <div className="rounded-lg overflow-hidden border-2 border-[#D4AF37] shadow-2xl h-[300px] sm:h-[400px]">
+          <div className="rounded-lg overflow-hidden border border-[#D4AF37] shadow-2xl h-[250px] sm:h-[400px]">
             <iframe
               title="Sree Events Vijayawada Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.024691046447!2d80.54543227471566!3d16.474419027685243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f192c4000001%3A0x28bf968575e25d86!2sSri%20Rama%20Nagar%2C%20Yerrabalem%2C%20Mangalagiri%2C%20Andhra%20Pradesh%20522503!5e0!3m2!1sen!2sin!4v1699011551247!5m2!1sen!2sin"
