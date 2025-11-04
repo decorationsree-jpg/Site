@@ -42,7 +42,7 @@ const AboutPage = () => {
               </p>
 
               <p className="text-lg leading-relaxed mb-6 text-gray-200">
-                At Sree Events, we offer comprehensive services including traditional wedding décor, engagement decoration, reception management, and destination wedding planning. Our talented team excels in creating stunning floral arrangements, innovative balloon decorations, and sophisticated lighting setups that bring your dream event to life.
+                At Sireeevents, we offer comprehensive services including traditional wedding décor, engagement decoration, reception management, and destination wedding planning. Our talented team excels in creating stunning floral arrangements, innovative balloon decorations, and sophisticated lighting setups that bring your dream event to life.
               </p>
 
               <p className="text-lg leading-relaxed text-gray-200">
