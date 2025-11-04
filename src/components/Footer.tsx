@@ -69,7 +69,7 @@ const Footer = () => {
                 professional event organizers near Vijayawada, affordable event
                 planners, or customized theme decoration
               </strong>
-              , <strong>Sree Events Vijayawada</strong> delivers one-stop
+              , <strong>Sireeevents Vijayawada</strong> delivers one-stop
               solutions for all your celebration needs.
               <br />
               <br />
