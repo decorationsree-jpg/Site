@@ -30,7 +30,7 @@ export const About = () => {
             Crafting Memorable
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-gray-200">
-            <span className="font-semibold text-white">Sree Events Vijayawada</span> is one of the 
+            <span className="font-semibold text-white">SireeEvents Vijayawada</span> is one of the 
             <strong> best event management companies in Vijayawada</strong>, 
             offering complete <strong>event planning and decoration services</strong> 
             for all occasions. Whether it’s a grand <strong>wedding celebration</strong>, 
