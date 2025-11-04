@@ -29,11 +29,11 @@ export const WhyChooseUs = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#E2C39A]">
-            Why Choose <span className="text-white">Sree Events</span>
+            Why Choose <span className="text-white">Sireeevents</span>
           </h2>
 
           <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-            Choosing <strong>Sree Events Vijayawada</strong> means partnering with
+            Choosing <strong>Sireeevents Vijayawada</strong> means partnering with
             a team that transforms your ideas into unforgettable experiences. 
             As one of the <strong>top event planners in Vijayawada</strong>, we bring 
             creativity, precision, and elegance to every celebration.
