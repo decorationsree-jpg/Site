@@ -22,7 +22,7 @@ export const BookNow = () => {
             Ready to Celebrate in Style?
           </h2>
           <p className="text-lg text-gray-200">
-            Let <strong>Sree Events Vijayawada</strong> turn your special occasion 
+            Let <strong>Sireeevents Vijayawada</strong> turn your special occasion 
             into a timeless memory. Whether it’s a <strong>wedding</strong>, 
             <strong> reception</strong>, <strong>birthday</strong>, or 
             <strong> corporate celebration</strong> — our creative planners will 
