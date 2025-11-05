@@ -47,7 +47,7 @@ export const About = () => {
             and <strong>destination weddings</strong>. From <strong>floral decorations</strong>, 
             <strong> balloon décor</strong>, and <strong>lighting setups</strong> 
             to <strong>theme-based event designs</strong>, we create experiences that 
-            reflect your style and story. Choose <strong>Sree Events</strong> for 
+            reflect your style and story. Choose <strong>Sireeevents</strong> for 
             <strong> affordable event management in Vijayawada</strong> — your 
             <strong> one-stop solution</strong> for weddings, parties, and 
             <strong> corporate events in Andhra Pradesh</strong>.
@@ -63,7 +63,7 @@ export const About = () => {
         >
           <img
             src="https://i.pinimg.com/1200x/a2/53/fc/a253fc965d6bcff7b014d412770e7ab8.jpg"
-            alt="Premium Decoration by Sree Events Vijayawada"
+            alt="Premium Decoration by Sireeevents Vijayawada"
             className="w-full h-[400px] md:h-[550px] object-cover"
           />
         </div>
